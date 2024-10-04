@@ -11,16 +11,16 @@ a solution to the project [Task Tracker CLI](http://roadmap.sh/projects/task-tra
 ```mermaid
   graph TD
   A[Command Line Get the command and Send to the Analyzer]
-  B{Read the command, is it legal for the program?}
+  A --> B{is it legal for the program?}
   B --> |No| C[error dealing]
-  B --> |Yes| D{analyze the command}
+  B --> |Yes| D{classify the command}
   C --> F{want to end?}
   F --> |No| A
   F --> |Yes| E[end]
   D --> |List| M[read the JSON file]
   D --> |Task Operation| N[edit the JSON file]
   D --> |Termination| F
-  M --> P[new and clean command line]
+  M --> P[print the message of success]
   N --> P
   P --> B
 ```
