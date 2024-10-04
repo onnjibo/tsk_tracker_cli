@@ -10,7 +10,7 @@ a solution to the project [Task Tracker CLI](http://roadmap.sh/projects/task-tra
 # The Main Logic
 ```mermaid
   graph TD
-  A[Command Line Get the command and 
+  A[Command Line Get the command and Send to the Analyzer]
   B{Read the command, is it legal for the program?}
   B --> |No| C[error dealing]
   B --> |Yes| D{analyze the command}
@@ -23,6 +23,7 @@ a solution to the project [Task Tracker CLI](http://roadmap.sh/projects/task-tra
   M --> P[new and clean command line]
   N --> P
   P --> B
+```
 
 # The Main  API
    
